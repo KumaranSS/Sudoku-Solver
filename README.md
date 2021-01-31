@@ -74,6 +74,7 @@ approximate 9x9 grid of the puzzle. This is because applying
 thresholding in this manner over the entire grid helps in getting 
 finer details in the numbers thereby making our algorithm for 
 recognizing the digits more robust.
+![](1.png)
 ### B. Isolating the grid from background clutter of the image:
 An important part of the algorithm is to correctly identify 
 the location of the Sudoku Grid in the given image. To achieve 
@@ -130,7 +131,7 @@ judge the location for the top right and bottom left corner
 points. The origin for the image co-ordinate system is located 
 at the top left corner of the image. The minimum distance and maximum distance points in most cases would be the top left 
 and bottom right corner points of the grid.
-
+![](2.png)
 
 Thus, traversing the image with only the grid details in it, 
 we accurately identify the minimum distance and the maximum 
@@ -179,7 +180,7 @@ correspondences among the four corner points are then used to
 obtain a 3x3 projection matrix. Applying this matrix to perform 
 the homographic transformation gives us a perfectly square
 Sudoku grid.
-
+![](6.png)
 
 ## II. RECOGNIZING THE DIGITS AND HANDLING ROTATION
 Now that we obtained the transformed square without the 
@@ -190,6 +191,7 @@ different font types of digits 1-9 as shown in figure-7 below.
 This part of the algorithm takes care of all kinds of rotation 
 including a completely inverted image as well.The steps taken 
 for this are described below:
+![](3.png)
 ### A. Preprocessing the Square Grid:
 On extracting only the square grid of the Sudoku, we need 
 to perform some preprocessing steps to extract only the digits 
@@ -312,6 +314,7 @@ finding a solution, we conclude the grid is unsolvable. For our
 purposes however, we assume that the image taken by the user 
 is a valid Sudoku puzzle and our algorithm will always solve 
 it irrespective of the difficulty level of the puzzle.
+![](4.png)
 
 ### IV. RESULTS AND CONCLUSIONS
 We present a Smart Sudoku Solver that can solve 
@@ -334,3 +337,4 @@ to scale as long as the edge length of the Sudoku is at least
 30% of the original image dimensions and robust to 6 most 
 commonly found in modern Sudoku images that give robust 
 results for template matching 
+![](breakdown.png)
