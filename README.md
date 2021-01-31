@@ -181,7 +181,7 @@ the homographic transformation gives us a perfectly square
 Sudoku grid.
 
 
-## IV. RECOGNIZING THE DIGITS AND HANDLING ROTATION
+## II. RECOGNIZING THE DIGITS AND HANDLING ROTATION
 Now that we obtained the transformed square without the 
 perspective, our next task is to locate the digit positions in the 
 puzzle grid and recognize them. For this we use template 
@@ -292,7 +292,7 @@ So now once we have the final recognized 9x9 matrix of the
 Sudoku we just give it as an input to the part of the algorithm 
 that actually solves the puzzle and gives the image of the solution as the output.
 
-## V. SOLVING THE SUDOKU
+## III. SOLVING THE SUDOKU
 ### Recursive Backtracking
 The algorithm to solve the Sudoku is based on a recursive 
 backtracking strategy. We store the numbers obtained from the 
@@ -313,7 +313,7 @@ purposes however, we assume that the image taken by the user
 is a valid Sudoku puzzle and our algorithm will always solve 
 it irrespective of the difficulty level of the puzzle.
 
-### VII. RESULTS AND CONCLUSIONS
+### IV. RESULTS AND CONCLUSIONS
 We present a Smart Sudoku Solver that can solve 
 unsolved Sudoku images with small amount of perspective. 
 Also illumination changes across the images are taken care 
